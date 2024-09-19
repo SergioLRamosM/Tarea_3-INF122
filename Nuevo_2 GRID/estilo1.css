@@ -1,0 +1,64 @@
+/**/
+.contenedor/*padre*/
+{
+    background-color: aqua;
+    padding: 10px;/*separar contenido*/
+    font-size: 23px;/*tamaño de la letra*/
+    text-align: center;/*alinear contenido*/
+    display: grid;
+    grid-gap: 10px;
+    /*en le padre se usa grid template colum para columnas y row  que es para filas*/
+    /*--------CON PX QUE SE PODRIA DECIR QUE ES MAS SEGURO*/
+    /*grid-template-columns: 150px 200px 50px 20px;
+    grid-template-rows: 100px 150px 50px 100px;*/
+    /*--------CON % AVECES SE SALE DEL DIV*/
+    /*grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 20% 30% 50%;
+    height: 300px;*/
+    /*fr son como frcciones*/
+    /*grid-template-columns: 1fr 1fr 5fr 1fr 100px;
+    /*fr sirve para generalizar un afracion mas exacta*/
+    /*grid-template-rows: 1fr 2fr 3fr ;*/
+    grid-template-columns: repeat(4,1fr) 5fr;
+    grid-template-rows: 2fr 1fr 8fr 2fr;
+}
+.contenedor>div/*sirve para generalizar todos los datos >div*/
+{
+    background-color: rgb(250, 200, 0);
+}
+.contenedor .uno /*caja hijo solo es grid-row o grid-colum*/
+{
+    background-color: rgb(119, 98, 139);
+    grid-column: 1/5;
+    grid-row: 1/3;
+}
+.contenedor .dos /*caja hijo solo es grid-row o grid-colum*/
+{
+    background-color: rgb(0, 240, 20);
+    grid-column: 5/6;
+    grid-row: 1/3;
+}
+.contenedor .tres /*caja hijo solo es grid-row o grid-colum*/
+{
+    background-color: rgb(18, 38, 216);
+    grid-column: 1/6;
+    grid-row: 3/7;
+}
+.contenedor .cuatro /*caja hijo solo es grid-row o grid-colum*/
+{
+    background-color: rgb(43, 105, 56);
+    grid-column: 1/3;
+    grid-row: 7/9;
+}
+.contenedor .cinco /*caja hijo solo es grid-row o grid-colum*/
+{
+    background-color: rgb(216, 41, 18);
+    grid-column: 3/4;
+    grid-row: 7/9;
+}
+.contenedor .seis /*caja hijo solo es grid-row o grid-colum*/
+{
+    background-color: rgb(216, 18, 190);
+    grid-column: 4/6;
+    grid-row: 7/9;
+}
